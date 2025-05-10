@@ -1,0 +1,14 @@
+<div class="counter-container">
+  <h2>Counter: {{ counter }}</h2>
+
+  <button class="btn increment" (click)="incrementValue()">+1</button>
+  <button class="btn decrement" (click)="decrementValue()">-1</button>
+  <button class="btn reset" (click)="resetData()">Reset</button>
+  <button class="btn clear" (click)="clearData()">Clear History</button>
+
+  <ul class="list_data">
+    <li *ngFor="let item of history" [ngClass]="item.type">
+      {{ item.message }}
+    </li>
+  </ul>
+</div>
